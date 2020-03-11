@@ -27,3 +27,4 @@ pip install -r requirements.txt
 ```
 python getCryptocurrenciesData.py
 ```
+This generates a sqlite database `crypto.db`
