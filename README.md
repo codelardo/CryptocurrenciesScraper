@@ -21,7 +21,7 @@ pip install -r requirements.txt
 # Usage
 1. Create env file and set environment variables: <br>
     BASE_URL="<span>http</span>s://coinmarketcap.com/currencies/" <br>
-    URL_QUERY_STRING="/historical-data/?start=20090101&end=20200302"
+    URL_QUERY_STRING="/historical-data/?start=20090101&end="
 2. Edit criptocurrencies.py with the list of cryptocurrencies you want
 3. Run the Following:
 ```

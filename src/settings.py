@@ -1,9 +1,11 @@
 from dotenv import load_dotenv
+from datetime import date
 import os, time, functools
 
 load_dotenv()
+today = date.today()
 BASE_URL = os.getenv("BASE_URL")
-URL_QUERY_STRING = os.getenv("URL_QUERY_STRING")
+URL_QUERY_STRING = os.getenv("URL_QUERY_STRING") + today.strftime("%Y%m%d")
 
 def timer(func):
     @functools.wraps(func)

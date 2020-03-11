@@ -15,7 +15,8 @@ def get_coins_links(coins):
 	return coin_links
 
 def get_history_table(coin, con):
-	print('Get ' + coin[0] + ' history')
+	coin_table = coin[0].replace("-", "_")
+	print('Get ' + coin_table + ' history')
 	db.create_table(coin[0], con)
 
 	site = requests.get(coin[1])
@@ -39,6 +40,7 @@ def get_history_table(coin, con):
 	        ratio = (date, price)
 	        data.append(ratio)
 	
+	data.reverse()
 	return data
 
 def get_history(coins, con):
@@ -56,6 +58,6 @@ def main():
 	db.data_record(data_coin, connection)
 	connection.commit()
 	connection.close()
-
+		
 if __name__ == '__main__':
     main()
